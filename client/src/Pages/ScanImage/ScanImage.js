@@ -3,8 +3,10 @@ import "./ScanImage.css";
 
 const ScanImage = () => {
   const [capturedImage, setCapturedImage] = useState(null);
+  const [text, setText] = useState("");
   const [isCameraActive, setIsCameraActive] = useState(false);
   const [prevImage, setPrevImage] = useState(false);
+  const [toggleDisabled, settoggleDisabled] = useState(false);
 
   const startCamera = async () => {
     try {
@@ -18,6 +20,8 @@ const ScanImage = () => {
     }
   };
   const captureImage = () => {
+    settoggleDisabled(true);
+    setText("Scanning...");
     const canvas = document.createElement("canvas");
     const video = videoRef.current;
 
@@ -37,9 +41,8 @@ const ScanImage = () => {
   return (
     <section className="Image-Scan-section">
       <div className="Image-Scan-video-scanner-div">
-        <div className="Image-Scan-video-div">
-          <h1>Video Calling Section</h1>
-        </div>
+        <h1>Video Calling Section</h1>
+
         <div className="Image-Scan-scanner-btn-div">
           <div className="Image-Scan-scanner">
             {!prevImage ? (
@@ -64,8 +67,11 @@ const ScanImage = () => {
             <button onClick={startCamera}>Start Camera</button>
           )}
           {isCameraActive && (
-            <button onClick={captureImage}>Capture Image</button>
+            <button onClick={captureImage} disabled={toggleDisabled}>
+              Capture Image
+            </button>
           )}
+          <h1>{text}</h1>
           {/* {capturedImage && (
            
           )} */}

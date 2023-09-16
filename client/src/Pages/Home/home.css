@@ -1,0 +1,99 @@
+
+#HomePage{
+    background-image: url("./images/homeBg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+}
+.home-main{
+    height:90%;
+    width:90%;
+    backdrop-filter: blur(8px);
+    overflow-y: scroll;
+}
+.home-main::-webkit-scrollbar{
+    display: none;
+}
+.home-navbar{
+    width:100%;
+    float :right;
+    list-style-type:none;
+}
+.home-navbar li{
+    text-align: center;
+    display: flex;
+    float: right;
+}
+.home-navbar a{
+    color:white;
+    text-decoration: none;
+    border-radius: 20px;
+    border:1px solid transparent;
+    padding:10px;
+    text-align:center;
+}
+.home-navbar a:hover{
+    border:1px solid white;
+} 
+.home-body{
+    background-image: url("./images/plant.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+}
+.home-icon{
+    display: flex;
+    height:180px;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+}
+.home-icon-cont{
+    color:white;
+    margin:0px;
+    width:50%;
+    text-align: center;
+}
+.home-icon h1{
+    font-size:100px;
+}
+#text-down{
+    color:white;
+}
+#text-up{
+    margin-top:20px;
+    color:rgb(0, 199, 0);
+}
+.home-operation{
+    height: 55%;
+    width:50%;
+}
+.home-search-container{
+    display: flex;
+    margin-top:20px;
+    justify-content: center;
+    align-items: center;
+}
+.home-search-container button{
+    border:0px;
+    padding:10px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    cursor: pointer;
+    font-size:18px;
+}
+.home-search-container input{
+    border-radius: 20px;
+    font-size:18px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+    border:0px;
+    padding:10px;
+    width:400px;
+}

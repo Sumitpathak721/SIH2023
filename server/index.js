@@ -23,7 +23,6 @@ const verifyToken = async (req, res, next) => {
     console.log("401");
     return res.sendStatus(401);
   }
-  console.log("got called");
   try {
     req.body.user = jwt.decode(token, process.env.JWT_SECRET_TOKEN);
     next();
@@ -39,6 +38,7 @@ Root.use("/signup", require("./Routes/signup.js"));
 Root.use("/login", require("./Routes/login.js"));
 Root.use("/verify", require("./Routes/verify.js"));
 Root.use("/userInfo", require("./Routes/userInfo.js"));
+Root.use("/AIModel",require("./Routes/AIModel.js"));
 //Listening Root
 Root.listen(process.env.PORT, () => {
   console.log(`${process.env.PORT}`);

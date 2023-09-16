@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/home.jsx";
 import Expert from "./Pages/Expert/Expert.js";
 //Importing Oauth
 import Oauth from "./Oauth.js";
@@ -52,7 +53,7 @@ function AppRoutes() {
       <Routes>
         {/* <Route path="/verify/:UserID/ResetPassword" element={<ResetPassword />} /> */}
         {/* <Route path="/verify/:UserID" element={<Verify />} /> */}
-        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/" element={<Home/>} />
         {userInfo ? (
           <>
             <Route path="/profile" element={<h1>Profile</h1>} />

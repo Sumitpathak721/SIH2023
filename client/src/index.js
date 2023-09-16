@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/home.jsx";
-import Expert from "./Pages/Expert/Expert.js";
+
 //Importing Oauth
 import Oauth from "./Oauth.js";
 
@@ -11,6 +10,9 @@ import Oauth from "./Oauth.js";
 import Auth from "./Pages/Auth/Auth.js";
 import Verify from "./Pages/Auth/verify.js";
 import ResetPassword from "./Pages/Auth/ResetPassword.js";
+import Home from "./Pages/Home/home.jsx";
+import Expert from "./Pages/Expert/Expert.js";
+import ScanImage from "./Pages/ScanImage/ScanImage.js";
 
 function MainRoutes() {
   return (
@@ -25,6 +27,7 @@ function MainRoutes() {
           <Route path="/*" element={<AppRoutes />} />
           {/* your all pages route routes */}
           <Route path="/expertAdvice" element={<Expert />} />
+          <Route path="/scanImage" element={<ScanImage />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -53,7 +56,7 @@ function AppRoutes() {
       <Routes>
         {/* <Route path="/verify/:UserID/ResetPassword" element={<ResetPassword />} /> */}
         {/* <Route path="/verify/:UserID" element={<Verify />} /> */}
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         {userInfo ? (
           <>
             <Route path="/profile" element={<h1>Profile</h1>} />

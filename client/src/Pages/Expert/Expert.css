@@ -1,0 +1,16 @@
+.Expert-advice-section {
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: center;
+  border: 2px solid green;
+  height: 500px;
+}
+.Expert-page-Welcome {
+  display: flex;
+  flex-direction: row;
+}
+
+.Expert-page-btn1 {
+  display: flex;
+}

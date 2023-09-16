@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.Image-Scan-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+}
+
+.Image-Scan-video-scanner-div {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid purple;
+  width: 60%;
+  height: 400px;
+}
+.Image-Scan-video-div {
+  border: 2px solid yellow;
+  width: 250px;
+  /* padding: 5px; */
+}
+.Image-Scan-scanner {
+  border: 1px solid cyan;
+  width: 200px;
+  height: 200px;
+}
+
+.Image-Scan-scanner-btn-div {
+  border: 2px solid yellow;
+  height: 200px;
+  width: 200px;
+  margin-top: 100px;
+  padding: 25px;
+}
+
+.Image-Scan-search-bar-section {
+  display: flex;
+}
+.Image-Scan-input-box-and-search {
+  display: flex;
+  border: 1px solid yellow;
+}
+.Image-Scan-camera {
+  height: 200px;
+  width: 200px;
+}
+.Image-Scan-search {
+  /* border: 1px solid red; */
+}
+
+.Image-Scan-queries-section {
+  display: flex;
+}
